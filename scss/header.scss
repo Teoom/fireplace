@@ -1,0 +1,66 @@
+.header {
+  margin-bottom: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-right: 39px;
+  font: 20px/70px "ScaniaSansCY";
+  font-weight: 400;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.header__text {
+  @include font(12px, 123%, 400);
+  margin-right: 30.99%;
+  letter-spacing: 0.05em;
+  color: $ftc;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__item {
+
+  a {
+    text-transform: uppercase;
+    @include font(13px, 16px, 400);
+    color: $htc;
+  }
+
+  a:hover {
+    color: $htca;
+    transition: all 0.3s ease;
+  }
+}
+
+.header__item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header__item:last-child {
+  margin-right: 58px;
+}
+
+.header__call {
+  cursor: pointer;
+}
+
+
+// BURGER
+
+#burger, [for="burger"] {
+  display: none;
+}
+
+
+

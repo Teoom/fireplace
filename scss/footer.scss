@@ -1,0 +1,107 @@
+.footer {
+  background-color: #121212;
+
+  h2 {
+    margin-bottom: 7.4vh;
+    text-align: left;
+  }
+}
+//CONCAT
+
+.contact {
+  margin-bottom: 7vh;
+}
+
+.contact__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p,
+  a {
+    @include font(22px, 36px, 300);
+  }
+
+  .tel {
+    @include font(36px, 33px, 100);
+  }
+}
+
+.contact__item {
+  width: 200px;
+}
+
+.contact__list .contact__item:first-child,
+.contact__list .contact__item:last-child {
+  flex-grow: 1;
+}
+
+.contact__list .contact__item:nth-child(2) {
+  flex-grow: 2;
+}
+
+.contact__item p:first-child {
+  @include font(14px, 36px, 300);
+  color: #949494;
+  margin-bottom: 1vh;
+}
+
+.contact__manager {
+  min-width: 284px;
+  min-height: 60px;
+  padding: 1.173% 0px;
+  background: #121212;
+  border: 1px solid #ceb787;
+  border-radius: 2px;
+  @include font(18px, 30px, 500);
+  color: $mtc;
+}
+
+.contact__manager:hover {
+  color: #ceb787;
+  transition: all 0.2s ease;
+}
+
+
+//LINE
+.footer__line {
+  width: 100vw;
+  border: 1px solid #232323;
+}
+
+// COPYRIGHT
+.footer .container:last-child {
+  padding: 2vh 10px;
+  max-height: 100px;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  @include font(14px, 18px, 400);
+  color: #6d6d6d;
+  letter-spacing: 0.05em;
+
+  p {
+    white-space: nowrap;
+
+  }
+
+  & p:first-child {
+    font: 14px/70px 'ScaniaSansCY';
+    margin-right: 110px;
+    color: $mtc;
+  }
+
+  & p:nth-child(2) {
+    margin-right: 47px
+  }
+
+  & p:nth-child(3) {
+    margin-right: 413px
+  }
+
+  & p:last-child {
+    margin-right: 0;
+  }
+}

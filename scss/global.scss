@@ -1,0 +1,223 @@
+// ScaniaSansCY
+@font-face {
+  font-family: "ScaniaSansCY";
+  src: local("ScaniaSansCY"),
+    url("../fonts/ScaniaSansCY-Regular.ttf") format("truetype"),
+    url("../fonts/ScaniaSansCY-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ScaniaSansCY-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ScaniaSansCYBold";
+  src: url("ScaniaSansCY-Bold.eot");
+  src: url("ScaniaSansCY-Bold.eot?#iefix") format("embedded-opentype"),
+    url("ScaniaSansCY-Bold.woff") format("woff"),
+    url("ScaniaSansCY-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// LabGrotesque
+@font-face {
+  font-family: "LabGrotesque";
+  src: local("LabGrotesque"),
+    url("../fonts/LabGrotesque-Thin.ttf") format("truetype"),
+    url("../fonts/LabGrotesque-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LabGrotesque-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LabGrotesque";
+  src: local("LabGrotesque"),
+    url("../fonts/LabGrotesque-Light.ttf") format("truetype"),
+    url("../fonts/LabGrotesque-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LabGrotesque-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LabGrotesque";
+  src: local("LabGrotesque"),
+    url("../fonts/LabGrotesque-Regular.ttf") format("truetype"),
+    url("../fonts/LabGrotesque-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LabGrotesque-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LabGrotesque";
+  src: local("LabGrotesque"),
+    url("../fonts/LabGrotesque-Medium.ttf") format("truetype"),
+    url("../fonts/LabGrotesque-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LabGrotesque-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font($s, $l, $w) {
+  font-family: "LabGrotesque";
+  font-size: $s;
+  line-height: $l;
+  font-weight: $w;
+}
+
+a {
+  color: $mtc;
+}
+
+a:hover {
+  color: $htca;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  @include font(40px, 60px, 300);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: linear-gradient(
+    240.22deg,
+    #ffffff 31.8%,
+    rgba(255, 255, 255, 0.1) 87.73%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  @include font(24px, 36px, 400);
+  margin-bottom: 25px;
+}
+
+html, body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  font-family: LabGrotesque, sans-serif;
+  background: linear-gradient(rgba($bcgc, 1), $bcgcs);
+  color: $mtc;
+}
+
+footer {
+  background-color: $bcgc;
+}
+
+.container {
+  max-width: 1194px;
+  padding: 76px 20px 0; 
+  margin: 0 auto;
+}
+
+.cost {
+  @include font(36px, 40px, 300);
+  color: $htca;
+  position: relative;
+  z-index: 2;
+  span {
+    font-size: 20px;
+    margin-right: 6px;
+  }
+}
+
+.gallery {
+  width: 537px;
+  min-height: 335px;
+  height: 41vh;
+  max-height: 346px;
+  background: $btc;
+  border-radius: 2px;
+  position: relative;
+
+
+  .gallery-left {
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/arrow.svg');
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 45px;
+    left: 8.4%;
+  }
+
+  .gallery-right {
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/arrow.svg');
+    transform: rotate(180deg);
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 45px;
+    right: 80%;
+  }
+}
+
+
+
+.btn {
+  min-width: 284px;
+  min-height: 60px;
+  padding: 1.173% 0px;
+  background: linear-gradient(
+    45deg,
+    rgba(249, 139, 77, 0.9) 31%,
+    rgba(236, 207, 148, 1) 64%
+  );
+  border-radius: 1px;
+  @include font(18px, 30px, 500);
+  color: #121212;
+
+  &:hover {
+    color: rgba(236, 207, 148, 0.9);;
+    animation: btn-bcgk 0.2s both  alternate ease;
+    transition: all 0.2s ease;
+  }
+}
+
+@keyframes btn-bcgk {
+  0% {
+    background: linear-gradient(
+      45deg,
+      rgba(249, 139, 77, 0.9) 31%,
+      rgba(236, 207, 148, 1) 64%
+    );
+  }
+  10% {
+    background: linear-gradient(
+      45deg,
+      rgba(249, 139, 77, 0.9) 37%,
+      rgba(236, 207, 148, 1) 
+    );
+  }
+  50% {
+    background: linear-gradient(
+      45deg,
+      rgba(249, 139, 77, 0.9) 42%,
+      rgba(236, 207, 148, 1) 
+    );
+  }
+  75% {
+    background: linear-gradient(
+      45deg,
+      rgba(249, 139, 77, 0.9) 48%,
+      rgba(236, 207, 148, 1) 
+    );
+  }
+  100% {
+    background: linear-gradient(
+      45deg,
+      rgba(249, 139, 77, 0.9) 54%,
+      rgba(236, 207, 148, 1) 
+    );
+  }
+}
